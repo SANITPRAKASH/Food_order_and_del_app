@@ -1,0 +1,128 @@
+.food-item {
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: box-shadow 0.3s;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .food-item:hover {
+    box-shadow: 0px 0px 15px #00000025;
+  }
+  
+  .food-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .food-item-info {
+    padding: 20px;
+    background-color: rgb(36, 32, 32);
+  }
+  
+  .food-item-name-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .food-item-name-rating p {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .food-item-name-rating img {
+    width: 70px;
+  }
+  
+  .food-item-desc {
+    color: #d0caca;
+    font-size: 12px;
+  }
+  
+  .food-item-price {
+    color: rgb(242, 235, 234);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0;
+  }
+  
+  .food-item-img-container {
+    position: relative;
+  }
+  
+  .food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  .food-item-counter {
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: rgb(246, 243, 241);
+  }
+  
+  .food-item-counter img {
+    width: 30px;
+  }
+  
+  .cartitemsp {
+    color: white;
+  }
+  
+
+  :root .food-item-info {
+    background-color: rgb(36, 32, 32);
+  }
+  
+  .lightcolors .food-item-desc {
+    color: grey;
+  }
+  
+  .lightcolors .cartitemsp,
+  .lightcolors .food-item-info,
+  .lightcolors .food-item-price,
+  .lightcolors .ratingstars,
+  .lightcolors .namewe {
+    color: black;
+  }
+  
+  .lightcolors .food-item-counter,
+  .lightcolors .food-item-info {
+    background-color: #FFFFFF;
+  }
+  
+  :root .food-item-img-container .add {
+    background-color: black;
+  }
+  
+  .lightcolors .food-item-img-container .add {
+    background-color: white;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

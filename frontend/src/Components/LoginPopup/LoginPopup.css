@@ -1,0 +1,125 @@
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090; /* Default dark mode background */
+    display: grid;
+}
+
+/* Popup Title - Dark Mode */
+:root .login-popup-title {
+    color: white; /* Default title color in dark mode */
+}
+
+/* Popup Title - Light Mode */
+.lightcolors .login-popup-title {
+    color: black; /* Title color in light mode */
+}
+
+/* Popup Container - Dark Mode */
+:root .login-popup-container {
+    background-color: var(--body-color); /* Inherits dark background */
+    color: #e8e8e8; /* Default text color in dark mode */
+}
+
+/* Popup Container - Light Mode */
+.lightcolors .login-popup-container {
+    background-color: white; /* Light mode background */
+    color: black; /* Text color in light mode */
+}
+
+/* Continue Button Position */
+.continuee {
+    position: relative;
+    top: 4px;
+}
+
+/* Popup Container */
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+}
+
+/* Popup Title */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* Default title color */
+}
+
+/* Icon Hover Effect */
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.login-popup-title img:hover {
+    transform: scale(1.2); /* Scale up the icon on hover */
+}
+
+/* Popup Inputs */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 2px solid #d46731; /* Border color */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Popup Button */
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Condition Section */
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+/* Highlighted Text (Span) */
+.login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Light Mode Adjustments for Inputs */
+.lightcolors .login-popup-inputs input {
+    background-color: #f0f0f0; /* Light background for inputs */
+    color: #333; /* Dark text for inputs */
+    border-color: #d46731; /* Same border in light mode */
+}
+
+/* Light Mode Adjustments for Popup Button */
+.lightcolors .login-popup-container button {
+    background-color: #ff6347; /* Slightly different shade for light mode */
+}

@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333; /* Dark gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    width: max(15%, 100px);
+    border-radius: 20px;
+}
+
+.navbar .profile {
+    width: 70px;
+    border: 2px solid #ff6347; /* Orange border for profile */
+    border-radius: 50%;
+    padding: 2px;
+}
+
+#visual-toggle-button {
+    width: 140px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid #ff6347; /* Orange border */
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444; /* Slightly lighter gray */
+    color: #ff6347; /* Orange text color */
+    transition: background-color 0.3s ease;
+}
+
+#visual-toggle-button:hover {
+    background-color: #555; /* Darker gray on hover */
+}
+
+.svgIcon-toggle {
+    width: 25px;
+    fill: #ff6347; /* Orange color for icon */
+}
+
+.moon-svg {
+    width: 13px;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.sun-svg {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.animate .moon-svg {
+    transform: rotate(360deg);
+    transition: all 0.3s;
+}
+
+/* Light mode specific styles */
+.lightcolors {
+    --sidebar: #f0f0f0;
+    --body-color: #FFFFFF;
+    --dark-text: #333;
+    --light-text: #101010;
+    --nav-color-two: #f6f6f2;
+    --nav-color-one: #e0e0e0;
+    --border-color: #ccc;
+    --light-text-secondary: #464853;
+    --light-text-desc: #020202;
+    --cards-text-color: #333;
+}
+
+/* Light mode adjustments */
+.lightcolors .navbar {
+    background-color: #e0e0e0; /* Light gray background */
+}
+
+.lightcolors #visual-toggle-button {
+    background-color: #ddd;
+    color: #ff6347;
+}
+
+.lightcolors .profile {
+    border: 2px solid #ff6347;
+}

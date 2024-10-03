@@ -1,0 +1,177 @@
+/* General Styles */
+.cart {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100vw; /* Ensure it takes full width */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.cart-items-title,
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 0.5fr; /* Maintain column structure */
+    gap: 10px; /* Add gap between columns */
+}
+
+.cart-items-title {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: max(1.1vw, 14px);
+    font-weight: bold;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.cart-items-item {
+    margin: 20px 0;
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.cart-items-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cart-items-item img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart hr {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 15px 0;
+}
+
+.cart-items-item .cross {
+    cursor: pointer;
+    color: #ff6347;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    transform-origin: center; /* Ensure scaling happens from the center */
+}
+
+.cart-items-item .cross:hover {
+    color: #d9534f;
+    transform: scale(1.2); /* Scale the element */
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between; /* Align labels and values */
+    font-size: 20px;
+    color: #333; /* Ensure text color is consistent */
+}
+
+.cart-total-details b {
+    font-weight: bold;
+}
+
+.cart-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between elements */
+}
+
+.cart-bottom button {
+    border: none;
+    color: #fff;
+    background-color: tomato;
+    padding: 12px 24px; /* Adjust padding for a more stylish look */
+    border-radius: 6px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 18px; /* Adjust font size for better readability */
+    font-weight: bold; /* Make the text bold for emphasis */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for a modern touch */
+    margin-top: 20px; /* Adds space above the button */
+}
+
+.cart-bottom button:hover {
+    background-color: #aa533b;
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 750px) {
+    .cart {
+        padding: 10px;
+        margin-top: 0;
+        overflow-x: auto; /* Ensure scrolling is available */
+    }
+
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr; /* Adjust for smaller screens */
+        font-size: 12px; /* Reduce font size for smaller screens */
+    }
+
+    .cart-items-title p,
+    .cart-items-item p {
+        margin: 0; /* Remove margin for better alignment */
+    }
+
+    .cart-items-title {
+        padding: 10px;
+    }
+
+    .cart-items-item {
+        padding: 10px;
+    }
+
+    .cart-total {
+        gap: 10px; /* Reduce gap between total elements */
+    }
+
+    .cart-total-details {
+        font-size: 14px; /* Scale down font size */
+    }
+
+    .cart-bottom {
+        gap: 15px; /* Reduce gap between elements */
+    }
+
+    .cart-bottom button {
+        width: auto; /* Adjust button width */
+        padding: 10px 20px; /* Adjust padding */
+        font-size: 16px; /* Scale down font size */
+    }
+
+    .cart-promocode-input {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Ensure input and button stretch full width */
+    }
+
+    .cart-promocode-input input {
+        width: 100%; /* Full width input */
+        margin-bottom: 10px; /* Space between input and button */
+    }
+
+    .cart-promocode-input button {
+        width: 100%; /* Full width button */
+    }
+}

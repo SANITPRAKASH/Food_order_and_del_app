@@ -1,0 +1,213 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo */
+.navbar .logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    border-radius: 20%;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #8895c0; /* Default text color */
+    font-size: 18px;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Button Styles */
+.navbar button {
+    background: transparent;
+    font-size: 15px;
+    color: #7e8dbd; /* Default button text color */
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover Effect */
+.navbar button:hover {
+    background-color: #fff4f2;
+}
+
+/* List Item Styles */
+.navbar li {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Underline Effect on Hover and Active Item */
+.navbar-menu li:hover {
+    border-bottom: 2px solid tomato;
+}
+
+.navbar-menu .active {
+    border-bottom: 2px solid tomato;
+}
+
+/* Search Icon Styles */
+.navbar-search-icon {
+    position: relative;
+}
+
+/* Dot Notification */
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+/* Profile Dropdown */
+.navbar-profile {
+    position: relative;
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef; /* Dropdown background */
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #ff6347;
+    outline: 2px solid white;
+    list-style: none;
+}
+
+.nav-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown img {
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+}
+
+/* Visual Toggle Button */
+#visual-toggle-button {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Light Mode Specific Styles */
+.lightcolors .navbar {
+    background-color: #ffffff; /* Light background for navbar */
+    color: #333; /* Dark text color */
+}
+
+.lightcolors .navbar-menu {
+    color: #333; /* Text color in light mode */
+}
+
+.lightcolors .navbar button {
+    color: #333; /* Button text color in light mode */
+}
+
+.lightcolors .navbar button:hover {
+    background-color: #e0e0e0; /* Light hover effect */
+}
+
+.lightcolors .nav-profile-dropdown {
+    background-color: #f9f9f9; /* Dropdown background in light mode */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right {
+        gap: 30px;
+    }
+    .navbar-right img {
+        width: 22px;
+    }
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right {
+        gap: 20px;
+    }
+    .navbar-right img {
+        width: 20px;
+    }
+    .navbar-right button {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}
+
+:root {
+    --body-color: #434242; /* Default background */
+}
+
+/* Ensure light mode only applies when the 'lightcolors' class is active */
+.lightcolors {
+    --body-color: #FFFFFF; /* Light mode background */
+}
+
+body {
+    background-color: var(--body-color); /* Apply body background from variables */
+}
