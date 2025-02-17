@@ -49,6 +49,18 @@
     box-sizing: border-box;
 }
 
+.place-order-left input[name='sem'],
+.place-order-left input[name='section'],
+.place-order-left input[name='usn'],
+.place-order-left input[name='phone'] {
+    width: 100%; /* Ensure full width for new fields */
+}
+
+.place-order-left input::placeholder {
+    color: #777; /* Placeholder text color */
+    font-size: 14px; /* Adjust font size */
+}
+
 .place-order-right {
     width: 100%;
     max-width: 500px;
