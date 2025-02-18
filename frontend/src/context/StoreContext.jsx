@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [food_list, setFood_list] = useState([]); // Changed foodList to food_list
     const [token, setToken] = useState('');
-    const url = "http://localhost:3000";
+    const url = "https://food-order-and-del-appbackend.onrender.com";
 
     const addToCart = async (itemId) => {
         setCartItems((prev) => {
